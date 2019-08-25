@@ -31,7 +31,7 @@ for k in range(0,t):
     for i in range(0,len(ds.parent)):
         ds.parent[i]=ds.find(i)
     c = Counter(ds.parent)
-    ans = 2*(len(c)-2)
+    ans = 2*(len(c)-2) # An extra -1 because we get an additional vertex 0 which is not valid.
     for x in c:
         ans+=c[x]-1
     print('Case #{}: {}'.format(k+1,ans))
