@@ -28,6 +28,7 @@ for k in range(0,t):
     for _ in range(m):
         x,y=map(int,input().split())
         ds.union(x,y)
+    #Grouping as per connected components, ie. Every vertex belongs to the component of it's highest level parent
     for i in range(0,len(ds.parent)):
         ds.parent[i]=ds.find(i)
     c = Counter(ds.parent)
